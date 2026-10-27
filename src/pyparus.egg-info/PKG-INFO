@@ -1,0 +1,43 @@
+Metadata-Version: 2.4
+Name: pyparus
+Version: 0.0.1
+Summary: Papyrus UML parser and code generator
+Author-email: Paal Pedersen <paalped@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/vavpp/pyparus
+Project-URL: Issues, https://github.com/vavpp/pyparus/issues
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Software Development :: Code Generators
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# PyParus
+
+PyParus is a Python library for parsing Papyrus UML models and generating code, documentation and diagrams.
+
+## Features
+
+- Parse Papyrus UML models
+- SQL generation
+- SQLAlchemy generation
+- JSON export
+- Markdown export
+- PlantUML export
+
+## Installation
+
+```bash
+pip install pyparus
+## Example
+from pyparus import UmlParser
+from pyparus.exporters import SqlAlchemyExporter
+
+model = UmlParser().parse_file("model.uml")
+
+code = SqlAlchemyExporter().export(model)
+print(code)

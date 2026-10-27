@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyparus"
+version = "0.0.1"
+
+authors = [
+  { name = "Paal Pedersen", email = "paalped@gmail.com" }
+]
+
+description = "Papyrus UML parser and code generator"
+readme = "README.md"
+requires-python = ">=3.12"
+
+license = "MIT" 
+license-files = ["LICENSE"]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Code Generators"
+]
+
+[project.urls]
+Homepage = "https://github.com/vavpp/pyparus"
+Issues = "https://github.com/vavpp/pyparus/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

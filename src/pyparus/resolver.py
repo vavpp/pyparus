@@ -1,4 +1,4 @@
-from uml.elements import UmlPrimitive
+from .elements import UmlPrimitive
 
 class Resolver:
 

@@ -1,19 +1,25 @@
 # PyParus
 
-PyParus is a Python library for reading UML models from Papyrus
-and generating code, documentation and diagrams.
+PyParus is a Python library for parsing Papyrus UML models and generating code, documentation and diagrams.
 
-Supported outputs:
+## Features
 
-- SQL DDL
-- SQLAlchemy
-- PlantUML
-- JSON
-- Markdown
+- Parse Papyrus UML models
+- SQL generation
+- SQLAlchemy generation
+- JSON export
+- Markdown export
+- PlantUML export
 
-Planned:
+## Installation
 
-- Pydantic
-- FastAPI
-- Django
-- OpenAPI
+```bash
+pip install pyparus
+## Example
+from pyparus import UmlParser
+from pyparus.exporters import SqlAlchemyExporter
+
+model = UmlParser().parse_file("model.uml")
+
+code = SqlAlchemyExporter().export(model)
+print(code)
