@@ -7,3 +7,6 @@ image.png
 .git
 .gitingore
 um2db.py
+__pycache__/
+*.pyc
+
